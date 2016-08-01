@@ -5,7 +5,7 @@
 $(function(){
     var totalV = 2,max = 1.1;//总的权重
     var plen = indexList.length;
-    var indexList_list = [];//jQuery.extend({}, {}, indexList);
+    var indexList_list = [];
         indexList_list = JSON.parse(JSON.stringify(indexList)),
         indexListAfterTab = [],//用于保存计算后 原有数据 一级
         childListAfterTab = [];//子对象 数据保存
@@ -24,7 +24,7 @@ $(function(){
                 noParentTag.push(tagList[tl]);
             }
         }
-        //console.log(parentTag);
+        
         $(parentTag).each(function(index){
             var tree = {},childTag = [];
 
@@ -41,13 +41,10 @@ $(function(){
             domTree.push(tree);
         });
 
-        //console.log(domTree);
+        
         domTrees(domTree);
     }
 
-    //$(document).on("click","#showTabs .showtab-parent span",function(e) {
-    //
-    //});
 
     //父 showtab
     $(document).on("click","#showTabs .showtab-parent span",function(){
@@ -71,7 +68,6 @@ $(function(){
             });
 
            deleteTabs(subId(data.factor));
-            //var xxx = subId2(childPar);
 
            deleteTabs2(subId2(childPar));//子级 同时删除
 
@@ -95,9 +91,6 @@ $(function(){
     //添加dom 树结构
     function domTrees(obj){
 
-        //var parentList = obj.parentTag,
-        //    childList = obj.childTag;
-
         //动态添加 tab
         $(obj).each(function(index){
 
@@ -120,12 +113,10 @@ $(function(){
             $("#mainTab").append(tabhtml);
             $("#tab"+index).data(obj[index].parentTag);
 
-            //$("#child"+index+"_"+i).data(obj[index].childTag[i]);
         });
 
         //添加事件
         $("#mainTab .dropdown").on("click",function(e){
-            //e.stopPropagation();
 
             var data = $(this).data(),
                 txt = $(this).children("a")[0].outerText,
@@ -143,11 +134,11 @@ $(function(){
                     '</div>'
             $(this).attr("isCheck",true);
             $(this).attr("isAdd",true);
-            //$("#showTabs .showtab-parent").empty();
+            
             if(isAdd != "true"){
                 $("#showTabs ").append(ht);
             }
-            //$("#showTabs .showtab-col").empty();
+            
             afterTab(data.id,data.factor,false);
         });
         //子
