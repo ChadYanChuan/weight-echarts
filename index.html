@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+
+        .mainList{
+            width: 100%;
+            /*height: 200px;*/
+            display:inline-block;
+        }
+        .mlist{
+            width: 300px;
+            height: 200px;
+            padding-top: 10px;
+            float: left;
+        }
+        #main{
+            width: 100%;height:400px;
+        }
+        .mainTab{
+            text-align: center;
+        }
+        .mainTab span{padding: 0 10px;}
+        .showTabs{width: 100%;overflow: hidden;padding: 0 15px;}
+        .showtab-row{
+            width: 100%;
+            overflow: hidden;
+        }
+        .showtab-parent,.showtab-cols{float: left;}
+        .showtab-parent{
+            width: 15%;
+            /*text-align: center;*/
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .showtab-cols{
+            width: 80%;
+        }
+        .showtab-col{
+            float: left;
+            width: 15%;
+            /*text-align: center;*/
+            height: 20px;
+            margin-left: 10px;
+        }
+        .showtab-del{
+            float: right;
+            font-size: 14px;
+            font-weight: normal;
+            background-color: #ddd;
+            padding: 0 10px;
+        }
+        .line{
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 20px;
+        }
+    </style>
+    <script src="js/echarts.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/listAll.js"></script>
+    <script src="js/list.js"></script>
+</head>
+<body>
+    <div id="showTabs" class="showTabs">
+
+        <!--<div class="showtab-row">-->
+            <!--<div class="showtab-parent"></div>-->
+
+            <!--<div class="showtab-cols">-->
+                <!--<div class="showtab-col "></div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    </div>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">权重列表</a>
+        </div>
+
+        <div>
+            <ul id="mainTab" class="nav navbar-nav">
+
+            </ul>
+        </div>
+
+    </nav>
+
+  
+    <div id="main" style=""></div>
+    <div class="line">二级权重</div>
+    <div id="mainList" class="mainList"></div>
+    
+
+    
+
+          <!--<div class="showtab-row">-->
+            <!--<div class="showtab-parent">AAAAAAAA</div>-->
+
+            <!--<div class="showtab-cols">-->
+                <!--<div class="showtab-col ">A</div>-->
+                <!--<div class="showtab-col ">B</div>-->
+                <!--<div class="showtab-col ">C</div>-->
+                <!--<div class="showtab-col ">D</div>-->
+            <!--</div>-->
+
+          <!--</div>-->
+
+    
+   
+    
+</body>
+
+</html>
